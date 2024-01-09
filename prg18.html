@@ -1,0 +1,44 @@
+<!-- var() function: to insert values to css variables -->
+<!-- variables:to store data -->
+<!-- local scope,global scope variable -->
+<!-- local scope: limited access -->
+<!-- global scope : can acess through the css file -->
+<!-- global 
+ :root{
+    --variable name:value ,case sensitive
+ } -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --x:blue;
+            --y:red;
+            --z:green;
+            --backg:black;
+        }
+        #para1{
+            color: var(--x);
+        }
+        #para2{
+            --z:green;
+            color: var(--y);
+        }
+        h1{
+            color: var(--z);
+        }
+        body{
+            background-color: var(--backg);
+        }
+    </style>
+ </head>
+ <body>
+    <h1>heading</h1>
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugit illum cupiditate velit temporibus deleniti eveniet hic doloremque. Ut earum quia laborum accusamus quod facilis blanditiis sapiente inventore consectetur voluptate.</p>
+    <p id="para2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic ducimus delectus id alias sapiente nobis fugit similique ea sit saepe quasi perferendis laudantium voluptatum officiis ad magni aliquid, quia et?</p>
+ </body>
+ </html>
